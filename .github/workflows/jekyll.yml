@@ -63,7 +63,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-            - name: SecureStack Application Composition Analysis
+            
+      - name: SecureStack Application Composition Analysis
   # You may pin to the exact commit or the version.
   # uses: SecureStackCo/actions-code@c2c35840882d041474c505c1045da157025cd57e
   uses: SecureStackCo/actions-code@v0.1.1
