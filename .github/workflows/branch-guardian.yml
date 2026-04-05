@@ -1,0 +1,22 @@
+name: "Branch Guardian - Protect main"
+
+on:
+  create:
+  workflow_dispatch:
+
+jobs:
+  protect-main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: infamous-riddles/branch-guardian@v1
+        with:
+          PERSONAL-ACCESS-TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          BASE-BRANCH-PATTERN: '^main$'
+          REQUIRED-NUMBER-OF-REVIEWERS: 1
+          DISMISS-STALE-PR-APPROVALS-ON-NEW-COMMITS: 'true'
+          REQUIRE-REVIEW-FROM-CODEOWNERS: 'false'
+          REQUIRE-LINEAR-HISTORY: 'false'
+          ALLOW-FORCE-PUSHES: 'false'
+          ALLOW-DELETIONS: 'false'
+          INCLUDE-ADMINISTRATORS: 'false'
