@@ -1,0 +1,5 @@
+# Global owners — all PRs require approval from at least one of these users.
+* @bluebird-sioux
+
+# Workflow files require explicit approval
+.github/workflows/ @bluebird-sioux

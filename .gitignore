@@ -1,0 +1,14 @@
+# Local environment variables — never commit real credentials
+.env
+.env.local
+.env.*.local
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+
+# Editor artefacts
+.vscode/
+.idea/
+*.swp
+*.swo
